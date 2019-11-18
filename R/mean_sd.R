@@ -50,9 +50,9 @@ mean_sd <- function(x,
   }
 
   if (show_n == "always" | (show_n == "ifNA" & any(is.na(x)))) { 
-    rtn <- paste0(frmt(as.integer(n), digits), "; ", frmt(m, digits), " $\\pm$ ", frmt(s, digits))
+    rtn <- paste0(frmt(as.integer(n), digits), "; ", frmt(m, digits), " \u00b1 ", frmt(s, digits))
   } else { 
-    rtn <- paste0(frmt(m, digits), " $\\pm$ ", frmt(s, digits))
+    rtn <- paste0(frmt(m, digits), " \u00b1 ", frmt(s, digits))
   }
 
   if (denote_sd == "paren") { 
@@ -85,9 +85,9 @@ gmean_sd <- function(x,
   }
 
   if (show_n == "always" | (show_n == "ifNA" & any(is.na(x)))) { 
-    rtn <- paste0(frmt(as.integer(n), digits), "; ", frmt(m, digits), " $\\pm$ ", frmt(s, digits))
+    rtn <- paste0(frmt(as.integer(n), digits), "; ", frmt(m, digits), " \u00b1 ", frmt(s, digits))
   } else { 
-    rtn <- paste0(frmt(m, digits), " $\\pm$ ", frmt(s, digits))
+    rtn <- paste0(frmt(m, digits), " \u00b1 ", frmt(s, digits))
   }
 
   if (denote_sd == "paren") { 
